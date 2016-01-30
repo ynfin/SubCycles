@@ -1,0 +1,72 @@
+﻿<html>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<h2>
+<!-- header_insertion_point -->
+</h2>
+
+<h1>
+<!-- logfile_insertion_point -->
+<!-- stats_insertion_point -->
+</h1>
+
+<script type="text/javascript">
+
+  google.charts.load('current', {'packages':['table','timeline']});
+  google.charts.setOnLoadCallback(drawt);
+
+  function drawt() {
+
+    var chart = new google.visualization.Timeline(document.getElementById('example2.2'));
+
+    var timeTable = new google.visualization.DataTable();
+    timeTable.addColumn({ type: 'string', id: 'Cycle' });
+    timeTable.addColumn({ type: 'string', id: 'Name' });
+    timeTable.addColumn({ type: 'date', id: 'Start' });
+    timeTable.addColumn({ type: 'date', id: 'End' });
+    timeTable.addRows([ 
+    	<!-- data_insertion_point -->
+    ]);
+
+
+var options = {
+timeline: { showRowLabels: true, groupByRowLabel: true, colorByRowLabel: true},
+avoidOverlappingGridLines: false
+};
+
+chart.draw(timeTable, options);
+  }
+  </script>
+
+  <body>
+    <div id="example2.2" style="Height: 1000px; Width: 10000px;"></div>
+  </body>
+
+
+
+  <style>
+h2 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26px;
+}
+
+h1 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26px;
+}
+
+ </style>
+
+ </html>
+
+
+
