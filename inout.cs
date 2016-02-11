@@ -112,6 +112,7 @@ namespace SubCycles
                     var newi = (int)Math.Round(double.Parse(number) / 100d)*100;
                     string tempstring = ("     Fill setpoint " + newi);
                     outputstring = outputstring + tempstring;
+
                     AccuFound = true;
                 }
 
